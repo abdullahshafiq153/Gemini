@@ -21,11 +21,11 @@ const ContextProvider = (props) => {
     setResultData("");
     setLoading(true);
     setShowResult(true);
-    setRecentPrompt(input);
-    setPrevPrompts(prev=>[...prev,input])
+    setRecentPrompt(prompt);  //
+    setPrevPrompts(prev=>[...prev,prompt]) //
     const response = await run(prompt);
     let responseArray = response.split("**");
-    let newResponse;
+    let newResponse="";
     for (let i = 0; i <responseArray.length; i++) {
       if (i === 0 || i % 2 !== 1) {
         newResponse += responseArray[i];
