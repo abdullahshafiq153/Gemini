@@ -13,10 +13,23 @@
   padding: 20px;
   color: #585858;
 }
+.nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.nav .new-chat-icon2 {
+  background-color: #e5eaf1; /* Add background color */
+  padding: 5px 8px;
+  visibility: hidden;
+}
 
 .main .nav img {
-  width: 40px;
+  width: 35px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .main-container {
@@ -124,7 +137,7 @@
   display: none;
 }
 .result-title {
-  margin: 40px 0px;
+  margin: 20px 0px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -181,5 +194,8 @@
     }
     .search-box div{
         gap: 5px;
+    }
+    .nav .new-chat-icon2 {
+      visibility: visible;
     }
 }

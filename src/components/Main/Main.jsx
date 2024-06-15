@@ -12,6 +12,7 @@ const Main = () => {
     resultData,
     setInput,
     input,
+    newChat
   } = useContext(Context);
 
   const handleSend = () => {
@@ -22,7 +23,16 @@ const Main = () => {
     <div className="main">
       <div className="nav">
         <p>Gemini</p>
-        <img src={assets.user_icon} alt="" />
+        <div className="nav-right">
+          <img
+            onClick={() => newChat()}
+            className="new-chat-icon2"
+            src={assets.plus_icon}
+            alt=""
+          />
+
+          <img src={assets.user_icon} alt="" />
+        </div>
       </div>
       <div className="main-container">
         {!showResult ? (
@@ -86,7 +96,9 @@ const Main = () => {
             <div>
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
-              <img onClick={handleSend} src={assets.send_icon} alt="" />
+              {input ? (
+                <img onClick={handleSend} src={assets.send_icon} alt="" />
+              ) : null}
             </div>
           </div>
           <p className="bottom-info">
