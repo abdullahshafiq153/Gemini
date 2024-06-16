@@ -11,6 +11,7 @@ const Sidebar = () => {
     setRecentPrompt(prompt)
     await onSent(prompt)
   }
+  
   return (
     <div className="sidebar">
       <div className="top">

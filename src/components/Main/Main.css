@@ -38,8 +38,8 @@
 }
 
 .main .greet {
-  margin: 50px 0px;
-  font-size: 56px;
+  margin: 10px 0px;
+  font-size: 50px;
   color: #c4c7c5;
   font-weight: 500;
   padding: 20px;
@@ -52,20 +52,37 @@
 }
 
 .main .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  margin: 20px 10px;
+  overflow-x: auto; /* Allow horizontal scroll if needed */
+  padding-bottom: 10px; /* Add some bottom padding */
+}
+
+.main .cards::-webkit-scrollbar {
+  display: none;
 }
 
 .main .card {
-  height: 200px;
+  width: 180px; /* Set fixed width */
+  height: 160px; /* Set fixed height */
   padding: 15px;
   background-color: #f0f4f9;
   border-radius: 10px;
   position: relative;
   cursor: pointer;
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  flex-grow: 0; /* Prevent cards from growing */
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
+  justify-content: start; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
 }
+
 .main .card img {
   width: 35px;
   padding: 5px;
@@ -181,21 +198,27 @@
 }
 
 @media (max-width:600px){
-    .main-bottom input{
-        flex: none;
-        width: 150px;
-    }
+  .main-bottom input {
+    flex: none;
+  }
 
-    .main-bottom img{
-        width: 20px;
-    }
-    .search-box{
-        padding: 5px 10px;
-    }
-    .search-box div{
-        gap: 5px;
-    }
-    .nav .new-chat-icon2 {
-      visibility: visible;
-    }
+  .main .cards {
+    width: 90vw;
+  }
+
+  .main-bottom img {
+    width: 20px;
+  }
+
+  .search-box {
+    padding: 5px 10px;
+  }
+
+  .search-box div {
+    gap: 5px;
+  }
+
+  .nav .new-chat-icon2 {
+    visibility: visible;
+  }
 }

@@ -19,6 +19,11 @@ const Main = () => {
     onSent(input);
   };
 
+  const handleCard = (text) => {
+    setInput(text);
+    onSent(text);
+  };
+
   return (
     <div className="main">
       <div className="nav">
@@ -39,25 +44,25 @@ const Main = () => {
           <>
             <div className="greet">
               <p>
-                <span>Hello, Dev.</span>
+                <span>Hello, World!</span>
               </p>
               <p>How can I help you today?</p>
             </div>
             <div className="cards">
-              <div className="card">
-                <p>Suggest beautiful places to see on an upcoming road trip</p>
+              <div onClick={()=>handleCard("Suggest beautiful places to see on an upcoming trip to Thailand")} className="card">
+                <p>Suggest beautiful places to see on an upcoming trip to Thailand</p>
                 <img src={assets.compass_icon} alt="" />
               </div>
-              <div className="card">
+              <div onClick={()=>handleCard("Briefly summarize this concept: urban planning")} className="card">
                 <p>Briefly summarize this concept: urban planning</p>
                 <img src={assets.bulb_icon} alt="" />
               </div>
-              <div className="card">
-                <p>Brainstorm team bonding activities for our work retreat</p>
+              <div onClick={()=>handleCard("Does the traditional education system prepare students for modern challenges?")} className="card">
+                <p>Does the traditional education system prepare students for modern challenges?</p>
                 <img src={assets.message_icon} alt="" />
               </div>
-              <div className="card">
-                <p>Improve the readability of the following code</p>
+              <div onClick={()=>handleCard("Write a story on Sentient AI rebellion")} className="card">
+                <p>Write a story on Sentient AI rebellion</p>
                 <img src={assets.code_icon} alt="" />
               </div>
             </div>
