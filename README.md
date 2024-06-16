@@ -1,7 +1,3 @@
-Sure! Here's a template for your README file that includes all the details you mentioned:
-
----
-
 # Gemini Clone
 
 ## Project Overview
