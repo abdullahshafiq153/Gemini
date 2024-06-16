@@ -58,8 +58,9 @@ Make sure you have the following installed on your local machine:
    ```plaintext
    VITE_GEMINI_API_KEY=your_api_key_here
    ```
-
-5. **Start the Development Server**
+   You can get your API key from https://aistudio.google.com/app/apikey
+   
+6. **Start the Development Server**
 
    Start the development server to see the application in action:
 
