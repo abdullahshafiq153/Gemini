@@ -27,7 +27,7 @@ const Main = () => {
   return (
     <div className="main">
       <div className="nav">
-        <p>Gemini</p>
+        <p onClick={() => newChat()}>Gemini</p>
         <div className="nav-right">
           <img
             onClick={() => newChat()}
